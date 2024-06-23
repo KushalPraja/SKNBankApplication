@@ -261,7 +261,7 @@ public class Main {
     System.out.println("Enter how much money you would like to transfer");
     int val = input.nextInt();
     account.withdraw(val);
-    mainMenu(clients);
+    MainMenu(clients);
     System.out.println("Enter the ID of the client you would like to transfer to");
     int ID2=input.nextInt();
     int idx2= clients.searchByID(ID2);
