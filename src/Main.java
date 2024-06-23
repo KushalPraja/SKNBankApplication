@@ -18,14 +18,12 @@ public class Main {
       """);
   }
 
-  // Sachkeerat Brar
   public static void exit(ClientList clients) throws IOException {
     clients.storeClientList();
     System.out.println("Thank you for using this program.");
     System.exit(0);
   }
 
-  // Nimay Desai
   public static void register() throws IOException {
     Scanner in = new Scanner(System.in);
     FileWriter fw = new FileWriter(Values.getSuperInfoLocation());
@@ -51,7 +49,6 @@ public class Main {
     fw.flush();
   }
 
-  // Nimay Desai
   public static boolean login(ClientList clients) throws IOException {
     Scanner in = new Scanner(System.in);
 
@@ -84,7 +81,6 @@ public class Main {
     return true;
   }
 
-  // Sachkeerat Brar
   public static String getDate() {
     Scanner in = new Scanner(System.in);
     String date;
@@ -96,7 +92,6 @@ public class Main {
     return date;
   }
 
-  // Sachkeerat Brar
   public static boolean validDate(String date) {
     int year, month, day;
 
@@ -131,7 +126,6 @@ public class Main {
     return true;
   }
 
-  // Sachkeerat Brar
   public static boolean validAge(String date) {
     int year, month, day;
 
@@ -159,7 +153,7 @@ public class Main {
     return true;
   }
 
-  // Sachkeerat Brar
+
   public static void updateBalance(ClientList clients) {
     for(ClientList.Node temp = clients.getHead(); temp != null; temp = temp.link)
       for(int i = 0; i < 5; i++)
@@ -168,7 +162,6 @@ public class Main {
 
   }
 
-// Kushal Prajapati
   // This is the main menu of the program that lets you pick between the 4 options
   public static void MainMenu(ClientList clients) throws IOException {
     System.out.println("Welcome to the Bank!");
@@ -191,7 +184,6 @@ public class Main {
 
   }
 
-  // Kushal Prajapati
   public static void ModifyBank() throws IOException{
     System.out.println("Select your option ");
     System.out.println("1 -->  Change Password");
@@ -199,12 +191,10 @@ public class Main {
     System.out.println("More coming soon!");
     Scanner sc=new Scanner(System.in);
     int opt=sc.nextInt();
-    switch(opt){
-      case 1 -> ChangePassword();
+    if (opt == 1) {
+      ChangePassword();
     }
   }
-
-  // Kushal Prajapati
 
   public static void ChangePassword() throws IOException {
 
